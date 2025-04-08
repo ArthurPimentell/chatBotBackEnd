@@ -1,6 +1,11 @@
 import express from 'express';
+import buscarResposta from './../client/ChatGptClient.js'
+import cors from 'cors';
+
 
 const APP = express();
+
+APP.use(cors())
 
 const PORT = 3000;
 
@@ -15,13 +20,15 @@ APP.get(`${PATH}`, (req, res) =>{
 
 APP.use(express.json());
 
-APP.post(`${PATH}`,(req,res) =>{
+APP.post(`${PATH}`,async (req,res) => {
 
     const PERGUNTA = req.body.pergunta;
-    //FAZER OPERAÇÕES
+
+    const RESPOSTA = await buscarResposta(PERGUNTA);
+    console.log(RESPOSTA)
 
     return res.status(200).json({
-        resposta: `A PERGUNTA FOI ${PERGUNTA}`
+        resposta: `${RESPOSTA}`
     });
 
 });
