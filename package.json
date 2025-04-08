@@ -1,0 +1,29 @@
+{
+  "type": "module",
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "criando um chatBot ultilizando express,mongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArthurPimentell/chartBotBackEnd.git"
+  },
+  "author": "Arthur Pimentel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArthurPimentell/chartBotBackEnd/issues"
+  },
+  "homepage": "https://github.com/ArthurPimentell/chartBotBackEnd#readme",
+  "dependencies": {
+    "axios": "^1.8.4",
+    "axios-retry": "^4.5.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongodb": "^6.15.0"
+  }
+}
